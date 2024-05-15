@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Reading and Writing website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body { margin: 0;
+  background-color: #f1f1f1;
+  font-family: Arial, Helvetica, sans-serif;}
+        .flex_container2{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            flex-shrink: 0;
+        }
+        .navbar{
+            position: absolute;
+            height: 5%;
+            top: 0;
+            width: 100%;
+            padding-top: 10px;
+            padding-bottom: 5px;
+        }
+        
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: double;
+  display: block;
+}
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+        .main{
+            height: max-content;
+            width: 100%;
+            padding-top: 5%;
+            /* padding-left: 15%; */
+            background-color: whitesmoke
+        }
+        .main1{
+          background-color: whitesmoke;
+          width: 10%;
+        }
+        .footer{
+            overflow: hidden;
+            background-color: rgb(26, 23, 23);
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+      
+        .write{
+            width: 20%;
+            background-color: rgb(45, 60, 73);
+            text-align: center;
+        }
+        .books{
+          width: 150px;
+          height: 200px;
+          object-fit: cover;
+        }
+        .carousel{
+          width: 80%;
+        }
+        .heading{
+            font-family: "Papyrus", "Courier New", monospace;
+            text-align: left;
+            padding: 1%;
+        }
+        .heading2{
+            text-align: center;
+            padding: 1%;
+            font-size: large;
+        }
+.header {
+  background-color: rgb(24, 23, 23);
+  padding: 2px;
+  text-align: center;
+  font-size: 24px;
+  color: #eee8e8;
+}
+.row {
+  display: -webkit-flex;
+  display: flex;
+}
+.column {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 10px;
+  padding-top: 50px;
+  height: 200px;
+  text-align: center;
+  font-family: "Papyrus", "Courier New", monospace;
+  color: azure;
+  justify-content: space-between;
+}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+.desc {
+  padding: 15px;
+  text-align: center;
+        }
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .row {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
+    </style>
+</head>
+<body>
+  <div class="navbar">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="mainsite.html"><img src="logo.png" width="40px" height="40px"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <div>
+                <a class="nav-link active" aria-current="page" href="#"><button class="dropbtn">Home</button></a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <div class="dropdown">
+                  <a class="nav-link" href="#"><button class="dropbtn">Browse</button></a>
+                  <div class="dropdown-content">
+                  <a href="search.html">Romance</a>
+                  <a href="searchhorror.html">Horror</a>
+                  <a href="#">Drama</a>
+                  <a href="#">Fiction</a>
+                  <a href="#">Thriller</a>
+                  <a href="#">Comedy</a>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item">
+                <div>
+                <a class="nav-link active" aria-current="page" href="sign in.html"><button class="dropbtn">Sign in/Log in</button></a>
+                </div>
+              </li>
+            </ul>
+            <form class="navbar-form navbar-left" action="/action_page.php">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search" name="search">
+                <div class="input-group-btn">
+                  <button class="btn btn-default" type="submit">
+                    <i class="glyphicon glyphicon-search"></i>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </nav>
+  </div>
+    <div class="main">
+      <div class="flex_container2">
+        <div class="main1">
+
+        </div>
+      <div class="carousel">
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="carousel\carousel1.jpeg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="carousel\carousel3.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="carousel\carousel4.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+      </div>
+      <hr>
+    <div class="heading">
+      <h2><b>Romance</b></h2>
+      <div class="flex_container2">
+        <div class="dropdown">
+          <a class="nav-link active" aria-current="page" href="book main1.html"><button class="dropbtn"> <img src="romance\59344312.jpg" alt="Cinque Terre" width="150" height="200"></button></a>
+          <div class="dropdown-content">
+          <img src="romance\59344312.jpg" alt="Cinque Terre" width="250" height="400">
+          <div class="desc"><b>Verity</b></div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a class="nav-link active" aria-current="page" href="#"><button class="dropbtn"> <img src="romance\517d005278c464c5bf01c7a3364c0b54.jpg" alt="Cinque Terre" width="150" height="200"></button></a>
+          <div class="dropdown-content">
+          <img src="romance\517d005278c464c5bf01c7a3364c0b54.jpg" alt="Cinque Terre" width="250" height="400">
+          <div class="desc"><b>Touch of Fire</b></div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a class="nav-link active" aria-current="page" href="#"><button class="dropbtn"> <img src="romance\1003w-5Zk2VM0-EAc.jpg" alt="Cinque Terre" width="150" height="200"></button></a>
+          <div class="dropdown-content">
+          <img src="romance\1003w-5Zk2VM0-EAc.jpg" alt="Cinque Terre" width="250" height="400">
+          <div class="desc"><b>Our Last Summer</b></div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a class="nav-link active" aria-current="page" href="#"><button class="dropbtn"> <img src="romance\1003w-sKWSpUucKO0.jpg" alt="Cinque Terre" width="150" height="200"></button></a>
+          <div class="dropdown-content">
+          <img src="romance\1003w-sKWSpUucKO0.jpg" alt="Cinque Terre" width="250" height="400">
+          <div class="desc"><b>Borcelle Love Story</b></div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a class="nav-link active" aria-current="page" href="#"><button class="dropbtn"> <img src="romance\36402ea47f908546865a1bb14e9340df.jpg" alt="Cinque Terre" width="150" height="200"></button></a>
+          <div class="dropdown-content">
+          <img src="romance\36402ea47f908546865a1bb14e9340df.jpg" alt="Cinque Terre" width="250" height="400">
+          <div class="desc"><b>One Night Love Story</b></div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a class="nav-link active" aria-current="page" href="#"><button class="dropbtn"> <img src="romance\download.png" alt="Cinque Terre" width="150" height="200"></button></a>
+          <div class="dropdown-content">
+          <img src="romance\download.png" alt="Cinque Terre" width="250" height="400">
+          <div class="desc"><b>Me and Your Love</b></div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a class="nav-link active" aria-current="page" href="#"><button class="dropbtn"> <img src="romance\forest.jpg" alt="Cinque Terre" width="150" height="200"></button></a>
+          <div class="dropdown-content">
+          <img src="romance\forest.jpg" alt="Cinque Terre" width="250" height="400">
+          <div class="desc"><b>A forest of hands and teeth</b></div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a class="nav-link active" aria-current="page" href="#"><button class="dropbtn"> <img src="romance\Gentle-Warrior-Julie-Garwood-cover.jpg.optimal.jpg" alt="Cinque Terre" width="150" height="200"></button></a>
+          <div class="dropdown-content">
+          <img src="romance\Gentle-Warrior-Julie-Garwood-cover.jpg.optimal.jpg" alt="Cinque Terre" width="250" height="400">
+          <div class="desc"><b>Gentle Warrior</b></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <hr>
+    <div class="heading">
+      <h2><b>Horror</b></h2>
+      <div class="flex_container2">
+        <div class="dropdown">
+          <a class="nav-link active" aria-current="page" href="book2 main1.html"><button class="dropbtn"> <img src="horror\photo_2020-05-22_02-11-38-682x1024.jpg" alt="Cinque Terre" width="150" height="200"></button></a>
+          <div class="dropdown-content">
+          <img src="horror\photo_2020-05-22_02-11-38-682x1024.jpg" alt="Cinque Terre" width="250" height="400">
+          <div class="desc"><b>A Demon is Risen</b></div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a class="nav-link active" aria-current="page" href="#"><button class="dropbtn"> <img src="horror\devil-satan-book-cover-template-design-275248b5899d0d2970c89053361a8dac.jpg" alt="Cinque Terre" width="150" height="200"></button></a>
+          <div class="dropdown-content">
+          <img src="horror\devil-satan-book-cover-template-design-275248b5899d0d2970c89053361a8dac.jpg" alt="Cinque Terre" width="250" height="400">
+          <div class="desc"><b>Devil</b></div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a class="nav-link active" aria-current="page" href="#"><button class="dropbtn"> <img src="horror\download (1).jpg" alt="Cinque Terre" width="150" height="200"></button></a>
+          <div class="dropdown-content">
+          <img src="horror\download (1).jpg" alt="Cinque Terre" width="250" height="400">
+          <div class="desc"><b>The Exorcist</b></div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a class="nav-link active" aria-current="page" href="#"><button class="dropbtn"> <img src="horror\download.jpg" alt="Cinque Terre" width="150" height="200"></button></a>
+          <div class="dropdown-content">
+          <img src="horror\download.jpg" alt="Cinque Terre" width="250" height="400">
+          <div class="desc"><b>Cold Dresses</b></div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a class="nav-link active" aria-current="page" href="#"><button class="dropbtn"> <img src="horror\81b1PP4RK1L._AC._SR360,460.jpg" alt="Cinque Terre" width="150" height="200"></button></a>
+          <div class="dropdown-content">
+          <img src="horror\81b1PP4RK1L._AC._SR360,460.jpg" alt="Cinque Terre" width="250" height="400">
+          <div class="desc"><b>That Night</b></div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a class="nav-link active" aria-current="page" href="#"><button class="dropbtn"> <img src="horror\the-25-creepiest-book-covers-ever-18-1556673907-aT4h-column-width-inline.jpg" alt="Cinque Terre" width="150" height="200"></button></a>
+          <div class="dropdown-content">
+          <img src="horror\the-25-creepiest-book-covers-ever-18-1556673907-aT4h-column-width-inline.jpg" alt="Cinque Terre" width="250" height="400">
+          <div class="desc"><b>The House of Dead Maids</b></div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a class="nav-link active" aria-current="page" href="#"><button class="dropbtn"> <img src="horror\the-taking-of-jake-livingston.jpeg" alt="Cinque Terre" width="150" height="200"></button></a>
+          <div class="dropdown-content">
+          <img src="horror\the-taking-of-jake-livingston.jpeg" alt="Cinque Terre" width="250" height="400">
+          <div class="desc"><b>The taking of Jake Livingston</b></div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a class="nav-link active" aria-current="page" href="#"><button class="dropbtn"> <img src="horror\walls.png" alt="Cinque Terre" width="150" height="200"></button></a>
+          <div class="dropdown-content">
+          <img src="horror\walls.png" alt="Cinque Terre" width="250" height="400">
+          <div class="desc"><b>The Woman in the Walls</b></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="heading">
+      <h2><b>Drama</b></h2>
+      <div class="flex_container2">
+        <div class="dropdown">
+          <a class="nav-link active" aria-current="page" href="#"><button class="dropbtn"> <img src="drama\40eea909c0a3b28562daf6dc50b070e8--dramas-free-books.jpg" alt="Cinque Terre" width="150" height="200"></button></a>
+          <div class="dropdown-content">
+          <img src="drama\40eea909c0a3b28562daf6dc50b070e8--dramas-free-books.jpg" alt="Cinque Terre" width="250" height="400">
+          <div class="desc"><b>Sunset Kisses</b></div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a class="nav-link active" aria-current="page" href="#"><button class="dropbtn"> <img src="drama\41A8BikUMZL._SX331_BO1,204,203,200_.jpg" alt="Cinque Terre" width="150" height="200"></button></a>
+          <div class="dropdown-content">
+          <img src="drama\41A8BikUMZL._SX331_BO1,204,203,200_.jpg" alt="Cinque Terre" width="250" height="400">
+          <div class="desc"><b>Here for the Drama</b></div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a class="nav-link active" aria-current="page" href="#"><button class="dropbtn"> <img src="drama\51ompznRZKL._SX320_BO1204203200_.jpg" alt="Cinque Terre" width="150" height="200"></button></a>
+          <div class="dropdown-content">
+          <img src="drama\51ompznRZKL._SX320_BO1204203200_.jpg" alt="Cinque Terre" width="250" height="400">
+          <div class="desc"><b>Then She Was Gone</b></div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a class="nav-link active" aria-current="page" href="#"><button class="dropbtn"> <img src="drama\71vJ9a0eMfL.jpg" alt="Cinque Terre" width="150" height="200"></button></a>
+          <div class="dropdown-content">
+          <img src="drama\71vJ9a0eMfL.jpg" alt="Cinque Terre" width="250" height="400">
+          <div class="desc"><b>The Case of American Drama</b></div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a class="nav-link active" aria-current="page" href="#"><button class="dropbtn"> <img src="drama\1444d83e-ab29-4601-a187-3030faa377d1.jpg" alt="Cinque Terre" width="150" height="200"></button></a>
+          <div class="dropdown-content">
+          <img src="drama\1444d83e-ab29-4601-a187-3030faa377d1.jpg" alt="Cinque Terre" width="250" height="400">
+          <div class="desc"><b>The Inn at Pearl Lake</b></div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a class="nav-link active" aria-current="page" href="#"><button class="dropbtn"> <img src="drama\ae9050a5b243e4f89441c474cb56e0fd.jpg" alt="Cinque Terre" width="150" height="200"></button></a>
+          <div class="dropdown-content">
+          <img src="drama\ae9050a5b243e4f89441c474cb56e0fd.jpg" alt="Cinque Terre" width="250" height="400">
+          <div class="desc"><b>Gem of the Ocean</b></div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a class="nav-link active" aria-current="page" href="#"><button class="dropbtn"> <img src="drama\attachment_66281301.jpg" alt="Cinque Terre" width="150" height="200"></button></a>
+          <div class="dropdown-content">
+          <img src="drama\attachment_66281301.jpg" alt="Cinque Terre" width="250" height="400">
+          <div class="desc"><b>Once Upon an Expat</b></div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a class="nav-link active" aria-current="page" href="#"><button class="dropbtn"> <img src="drama\Premade-Romance-Erotica-Thriller-Drama-eBook-Book-Cover-Last-Year-In-Venice.jpg" alt="Cinque Terre" width="150" height="200"></button></a>
+          <div class="dropdown-content">
+          <img src="drama\Premade-Romance-Erotica-Thriller-Drama-eBook-Book-Cover-Last-Year-In-Venice.jpg" alt="Cinque Terre" width="250" height="400">
+          <div class="desc"><b>Last Year in Venice</b></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+<div class="heading">
+  <h2><b>Fiction</b></h2>
+  <div class="flex_container2">
+    <div class="dropdown">
+      <a class="nav-link active" aria-current="page" href="#"><button class="dropbtn"> <img src="fiction\9fa08e532e0a0e267a38fec439fac6cd.jpg" alt="Cinque Terre" width="150" height="200"></button></a>
+      <div class="dropdown-content">
+      <img src="fiction\9fa08e532e0a0e267a38fec439fac6cd.jpg" alt="Cinque Terre" width="250" height="400">
+      <div class="desc"><b>End Game</b></div>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a class="nav-link active" aria-current="page" href="#"><button class="dropbtn"> <img src="fiction\b666c2884d0ddb0761b6956db89e2181.jpg" alt="Cinque Terre" width="150" height="200"></button></a>
+      <div class="dropdown-content">
+      <img src="fiction\b666c2884d0ddb0761b6956db89e2181.jpg" alt="Cinque Terre" width="250" height="400">
+      <div class="desc"><b>Twisted</b></div>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a class="nav-link active" aria-current="page" href="#"><button class="dropbtn"> <img src="fiction\contemporary-fiction-night-time-book-cover-design-template-1be47835c3058eb42211574e0c4ed8bf_screen.jpg" alt="Cinque Terre" width="150" height="200"></button></a>
+      <div class="dropdown-content">
+      <img src="fiction\contemporary-fiction-night-time-book-cover-design-template-1be47835c3058eb42211574e0c4ed8bf_screen.jpg" alt="Cinque Terre" width="250" height="400">
+      <div class="desc"><b>Memory</b></div>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a class="nav-link active" aria-current="page" href="#"><button class="dropbtn"> <img src="fiction\crime-and-mystery-cover-scaled-1.jpeg" alt="Cinque Terre" width="150" height="200"></button></a>
+      <div class="dropdown-content">
+      <img src="fiction\crime-and-mystery-cover-scaled-1.jpeg" alt="Cinque Terre" width="250" height="400">
+      <div class="desc"><b>Fortress Blood</b></div>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a class="nav-link active" aria-current="page" href="#"><button class="dropbtn"> <img src="fiction\da20b22fe0f8413dbcfbc25642322081.jpg" alt="Cinque Terre" width="150" height="200"></button></a>
+      <div class="dropdown-content">
+      <img src="fiction\da20b22fe0f8413dbcfbc25642322081.jpg" alt="Cinque Terre" width="250" height="400">
+      <div class="desc"><b>The Lives We Lost</b></div>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a class="nav-link active" aria-current="page" href="#"><button class="dropbtn"> <img src="fiction\f7c812c9b0296cd9f119e33a06d9a256.jpg" alt="Cinque Terre" width="150" height="200"></button></a>
+      <div class="dropdown-content">
+      <img src="fiction\f7c812c9b0296cd9f119e33a06d9a256.jpg" alt="Cinque Terre" width="250" height="400">
+      <div class="desc"><b>The Past is Rising</b></div>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a class="nav-link active" aria-current="page" href="#"><button class="dropbtn"> <img src="fiction\the-museum-of-extraordinary-things-9781471112157_hr.jpg" alt="Cinque Terre" width="150" height="200"></button></a>
+      <div class="dropdown-content">
+      <img src="fiction\the-museum-of-extraordinary-things-9781471112157_hr.jpg" alt="Cinque Terre" width="250" height="400">
+      <div class="desc"><b>The Museum of Extraordinary Things</b></div>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a class="nav-link active" aria-current="page" href="#"><button class="dropbtn"> <img src="fiction\World-Whisperer.jpg" alt="Cinque Terre" width="150" height="200"></button></a>
+      <div class="dropdown-content">
+      <img src="fiction\World-Whisperer.jpg" alt="Cinque Terre" width="250" height="400">
+      <div class="desc"><b>World Whisperer</b></div>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
+<div class="heading">
+  <h2><b>Thriller</b></h2>
+  <div class="flex_container2">
+    <div class="dropdown">
+      <a class="nav-link active" aria-current="page" href="#"><button class="dropbtn"> <img src="thriller\40c049bb4d6318e45e9f777ad40e6e32.jpg" alt="Cinque Terre" width="150" height="200"></button></a>
+      <div class="dropdown-content">
+      <img src="thriller\40c049bb4d6318e45e9f777ad40e6e32.jpg" alt="Cinque Terre" width="250" height="400">
+      <div class="desc"><b>Ill-Fame</b></div>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a class="nav-link active" aria-current="page" href="#"><button class="dropbtn"> <img src="thriller\02596e13079dd734ce36dc8feea39084.jpg" alt="Cinque Terre" width="150" height="200"></button></a>
+      <div class="dropdown-content">
+      <img src="thriller\02596e13079dd734ce36dc8feea39084.jpg" alt="Cinque Terre" width="250" height="400">
+      <div class="desc"><b>A Spy Story from Cold War</b></div>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a class="nav-link active" aria-current="page" href="#"><button class="dropbtn"> <img src="thriller\857826c68a9ce0aacdb38ece25e0d8e1--award-winning-books-in-the-mind.jpg" alt="Cinque Terre" width="150" height="200"></button></a>
+      <div class="dropdown-content">
+      <img src="thriller\857826c68a9ce0aacdb38ece25e0d8e1--award-winning-books-in-the-mind.jpg" alt="Cinque Terre" width="250" height="400">
+      <div class="desc"><b>In The Mind of Revenge</b></div>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a class="nav-link active" aria-current="page" href="#"><button class="dropbtn"> <img src="thriller\attachment_75941258.jpg" alt="Cinque Terre" width="150" height="200"></button></a>
+      <div class="dropdown-content">
+      <img src="thriller\attachment_75941258.jpg" alt="Cinque Terre" width="250" height="400">
+      <div class="desc"><b>Girl In Trouble</b></div>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a class="nav-link active" aria-current="page" href="#"><button class="dropbtn"> <img src="thriller\Book Cover Template for Crime Thriller Novel copy.jpg" alt="Cinque Terre" width="150" height="200"></button></a>
+      <div class="dropdown-content">
+      <img src="thriller\Book Cover Template for Crime Thriller Novel copy.jpg" alt="Cinque Terre" width="250" height="400">
+      <div class="desc"><b>The Good Guy</b></div>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a class="nav-link active" aria-current="page" href="#"><button class="dropbtn"> <img src="thriller\image.jpg" alt="Cinque Terre" width="150" height="200"></button></a>
+      <div class="dropdown-content">
+      <img src="thriller\image.jpg" alt="Cinque Terre" width="250" height="400">
+      <div class="desc"><b>In The Blood</b></div>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a class="nav-link active" aria-current="page" href="#"><button class="dropbtn"> <img src="thriller\the-perfect-smile-a-jessie-hunt-psychological-suspense-thriller-book-four.jpg" alt="Cinque Terre" width="150" height="200"></button></a>
+      <div class="dropdown-content">
+      <img src="thriller\the-perfect-smile-a-jessie-hunt-psychological-suspense-thriller-book-four.jpg" alt="Cinque Terre" width="250" height="400">
+      <div class="desc"><b>The Perfect Smile</b></div>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a class="nav-link active" aria-current="page" href="#"><button class="dropbtn"> <img src="thriller\thriller-suspense-book-cover-design-template-1438d47348d378a3f26d2c78a2b48a54_screen.jpg" alt="Cinque Terre" width="150" height="200"></button></a>
+      <div class="dropdown-content">
+      <img src="thriller\thriller-suspense-book-cover-design-template-1438d47348d378a3f26d2c78a2b48a54_screen.jpg" alt="Cinque Terre" width="250" height="400">
+      <div class="desc"><b>Mastermind</b></div>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
+<div class="heading">
+  <h2><b>Comedy</b></h2>
+  <div class="flex_container2">
+    <div class="dropdown">
+      <a class="nav-link active" aria-current="page" href="#"><button class="dropbtn"> <img src="comedy\51ebPYg4FmL._SX342_SY445_QL70_ML2_.jpg" alt="Cinque Terre" width="150" height="200"></button></a>
+      <div class="dropdown-content">
+      <img src="comedy\51ebPYg4FmL._SX342_SY445_QL70_ML2_.jpg" alt="Cinque Terre" width="250" height="400">
+      <div class="desc"><b>Just Married Again</b></div>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a class="nav-link active" aria-current="page" href="#"><button class="dropbtn"> <img src="comedy\51R2dibK9fL.jpg" alt="Cinque Terre" width="150" height="200"></button></a>
+      <div class="dropdown-content">
+      <img src="comedy\51R2dibK9fL.jpg" alt="Cinque Terre" width="250" height="400">
+      <div class="desc"><b>Until We Collide</b></div>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a class="nav-link active" aria-current="page" href="#"><button class="dropbtn"> <img src="comedy\413v0LFc02L.jpg" alt="Cinque Terre" width="150" height="200"></button></a>
+      <div class="dropdown-content">
+      <img src="comedy\413v0LFc02L.jpg" alt="Cinque Terre" width="250" height="400">
+      <div class="desc"><b>The Billionare Blooper</b></div>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a class="nav-link active" aria-current="page" href="#"><button class="dropbtn"> <img src="comedy\5122eRyfcrL.jpg" alt="Cinque Terre" width="150" height="200"></button></a>
+      <div class="dropdown-content">
+      <img src="comedy\5122eRyfcrL.jpg" alt="Cinque Terre" width="250" height="400">
+      <div class="desc"><b>The Best Medicine</b></div>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a class="nav-link active" aria-current="page" href="#"><button class="dropbtn"> <img src="comedy\24438_6234374_1167256_thumbnail.jpg" alt="Cinque Terre" width="150" height="200"></button></a>
+      <div class="dropdown-content">
+      <img src="comedy\24438_6234374_1167256_thumbnail.jpg" alt="Cinque Terre" width="250" height="400">
+      <div class="desc"><b>Circumcised at Seventeen</b></div>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a class="nav-link active" aria-current="page" href="#"><button class="dropbtn"> <img src="comedy\good-omens.jpg" alt="Cinque Terre" width="150" height="200"></button></a>
+      <div class="dropdown-content">
+      <img src="comedy\good-omens.jpg" alt="Cinque Terre" width="250" height="400">
+      <div class="desc"><b>Good Omens</b></div>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a class="nav-link active" aria-current="page" href="#"><button class="dropbtn"> <img src="comedy\images.jpg" alt="Cinque Terre" width="150" height="200"></button></a>
+      <div class="dropdown-content">
+      <img src="comedy\images.jpg" alt="Cinque Terre" width="250" height="400">
+      <div class="desc"><b>On Schedule</b></div>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a class="nav-link active" aria-current="page" href="#"><button class="dropbtn"> <img src="comedy\inner-thoughts-funny-book-cover-design-template-ba9b4436a3f1ae884b39928edacd7e6f_screen.jpg" alt="Cinque Terre" width="150" height="200"></button></a>
+      <div class="dropdown-content">
+      <img src="comedy\inner-thoughts-funny-book-cover-design-template-ba9b4436a3f1ae884b39928edacd7e6f_screen.jpg" alt="Cinque Terre" width="250" height="400">
+      <div class="desc"><b>It Sounded Better in my Head</b></div>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+    <div class="header">
+        <h2>Contact Us</h2>
+      </div>
+      <div class="row">
+        <div class="column" style="background-color:rgb(40, 40, 40);">
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-twitter"></a>
+          <a href="#" class="fa fa-instagram"></a>
+        </div>
+        <div class="column" style="background-color:rgb(40, 40, 40);"><h1>CodeVice</h1></div>
+      </div>  
+      <br>
+      <br>
+      <br>    
+    <div class="footer">
+        <div class="flex_container2"> 
+            <div class="heading2">
+              <a href="write1.html"> <span class="glyphicon glyphicon-pencil"></span> Write </a>           
+             </div>
+             <div class="heading2">
+              <a href="account.html"> <span class="glyphicon glyphicon-user"></span> Account </span></a>
+        </div>
+    </div>
+    <script>
+      var prevScrollpos = window.pageYOffset;
+      window.onscroll = function() {
+      var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+          document.getElementById("navbar").style.top = "0";
+        } else {
+          document.getElementById("navbar").style.top = "-50px";
+        }
+        prevScrollpos = currentScrollPos;
+      }
+      </script>
+</body>
+</html>

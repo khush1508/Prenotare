@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romance</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+         body { margin: 0;
+  background-color: whitesmoke;
+  font-family: Arial, Helvetica, sans-serif;}
+        .flex1{
+            display: flex;
+            flex-direction: row;
+            justify-content:left;
+            padding-top: 5%;
+            padding-left: 30%;
+            /* justify-content: flex-start; */
+        }
+        .navbar{
+            position: absolute;
+            height: 5%;
+            top: 0;
+            width: 100%;
+            padding-top: 10px;
+            padding-bottom: 5px;
+        }
+        
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: double;
+  display: block;
+}
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+.heading1{
+            font-family: "Papyrus", "Courier New", monospace;
+            text-align: left;
+            padding: 5%;
+            font-size: large;
+        }
+.books{
+          width: 150px;
+          height: 200px;
+          object-fit: cover;
+        }
+        .about{
+            padding-left:5% ;
+            text-align: start;
+            width: 50%;
+        }
+        .desc {
+  padding: 15px;
+  text-align: center;
+        }
+            .main{
+            height: 1000px;
+            width: 100%;
+            padding-top: 3%;
+            padding:1%;
+            background-color: whitesmoke;
+            }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="mainsite.html"><img src="logo.png" width="40px" height="40px"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <div>
+                    <a class="nav-link active" aria-current="page" href="mainsite.html"><button class="dropbtn">Home</button></a>
+                    </div>
+                  </li>
+                  <li class="nav-item">
+                    <div class="dropdown">
+                      <a class="nav-link" href="#"><button class="dropbtn">Browse</button></a>
+                      <div class="dropdown-content">
+                        <a href="#">Romance</a>
+                        <a href="search horror.html">Horror</a>
+                        <a href="#">Drama</a>
+                        <a href="#">Fiction</a>
+                        <a href="#">Thriller</a>
+                        <a href="#">Comedy</a>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <form class="navbar-form navbar-left" action="/action_page.php">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search" name="search">
+                    <div class="input-group-btn">
+                      <button class="btn btn-default" type="submit">
+                        <i class="glyphicon glyphicon-search"></i>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div class="main">
+            <div class="flex1">
+                <div class="dropdown">
+                    <a class="nav-link active" aria-current="page" href="book main1.html"><button class="dropbtn"> <img src="romance\59344312.jpg" alt="Cinque Terre" width="150" height="200"></button></a>
+                    <div class="dropdown-content">
+                    <img src="romance\59344312.jpg" alt="Cinque Terre" width="250" height="400">
+                    <div class="desc">Verity</div>
+                    </div>
+                  </div>
+            <div class="about">
+                <div class="heading1">
+                <h3><b>Verity</b></h3>
+                </div>
+                <div>
+                    <p>
+                        A famous author named Verity is medically unable to fulfill her contract and complete her series of thrillers — creepy novels told from the villains' point of view. Jeremy, who is Verity's husband, and the publishing house are willing to pay an absurd amount of money for Lowen to finish the series.
+                    </p>
+                </div>
+            </div>
+        </div>
+            <div class="flex1">
+                <div class="dropdown">
+                    <a class="nav-link active" aria-current="page" href="#"><button class="dropbtn"> <img src="romance\517d005278c464c5bf01c7a3364c0b54.jpg" alt="Cinque Terre" width="150" height="200"></button></a>
+                    <div class="dropdown-content">
+                    <img src="romance\517d005278c464c5bf01c7a3364c0b54.jpg" alt="Cinque Terre" width="250" height="400">
+                    <div class="desc">Touch of Fire</div>
+                    </div>
+                  </div>
+            <div class="about">
+                <div class="heading1">
+                <h3><b>Touch of Fire</b></h3>
+                </div>
+                <div>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti officia consequatur, illum ab inventore minima vitae doloremque fuga hic obcaecati, enim ullam perspiciatis ea accusamus voluptas praesentium beatae sunt rerum.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="flex1">
+            <div class="dropdown">
+                <a class="nav-link active" aria-current="page" href="#"><button class="dropbtn"> <img src="romance\1003w-5Zk2VM0-EAc.jpg" alt="Cinque Terre" width="150" height="200"></button></a>
+                <div class="dropdown-content">
+                <img src="romance\1003w-5Zk2VM0-EAc.jpg" alt="Cinque Terre" width="250" height="400">
+                <div class="desc">Our Last Summer</div>
+                </div>
+              </div>
+        <div class="about">
+            <div class="heading1">
+            <h3><b>Our Last Summer</b></h3>
+            </div>
+            <div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti officia consequatur, illum ab inventore minima vitae doloremque fuga hic obcaecati, enim ullam perspiciatis ea accusamus voluptas praesentium beatae sunt rerum.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="flex1">
+        <div class="dropdown">
+            <a class="nav-link active" aria-current="page" href="#"><button class="dropbtn"> <img src="romance\1003w-sKWSpUucKO0.jpg" alt="Cinque Terre" width="150" height="200"></button></a>
+            <div class="dropdown-content">
+            <img src="romance\1003w-sKWSpUucKO0.jpg" alt="Cinque Terre" width="250" height="400">
+            <div class="desc">Borcelle Love Story</div>
+            </div>
+          </div>
+    <div class="about">
+        <div class="heading1">
+        <h3><b>Borcelle Love Story</b></h3>
+        </div>
+        <div>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti officia consequatur, illum ab inventore minima vitae doloremque fuga hic obcaecati, enim ullam perspiciatis ea accusamus voluptas praesentium beatae sunt rerum.
+            </p>
+        </div>
+    </div>
+</div>
+<div class="flex1">
+    <div class="dropdown">
+        <a class="nav-link active" aria-current="page" href="#"><button class="dropbtn"> <img src="romance\36402ea47f908546865a1bb14e9340df.jpg" alt="Cinque Terre" width="150" height="200"></button></a>
+        <div class="dropdown-content">
+        <img src="romance\36402ea47f908546865a1bb14e9340df.jpg" alt="Cinque Terre" width="250" height="400">
+        <div class="desc">One Night Love Story</div>
+        </div>
+      </div>
+<div class="about">
+    <div class="heading1">
+    <h3><b>One Night Love Story</b></h3>
+    </div>
+    <div>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quia expedita assumenda repellat facere incidunt commodi eum optio eveniet vitae blanditiis, earum deleniti aliquam molestias modi illum facilis molestiae eaque!
+        </p>
+    </div>
+</div>
+</div>
+<div class="flex1">
+    <div class="dropdown">
+        <a class="nav-link active" aria-current="page" href="#"><button class="dropbtn"> <img src="romance\download.png" alt="Cinque Terre" width="150" height="200"></button></a>
+        <div class="dropdown-content">
+        <img src="romance\download.png" alt="Cinque Terre" width="250" height="400">
+        <div class="desc">Me and Your Love</div>
+        </div>
+      </div>
+<div class="about">
+    <div class="heading1">
+    <h3><b>ME and You Love</b></h3>
+    </div>
+    <div>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti officia consequatur, illum ab inventore minima vitae doloremque fuga hic obcaecati, enim ullam perspiciatis ea accusamus voluptas praesentium beatae sunt rerum.
+        </p>
+    </div>
+</div>
+</div>
+<div class="flex1">
+    <div class="dropdown">
+        <a class="nav-link active" aria-current="page" href="#"><button class="dropbtn"> <img src="romance\forest.jpg" alt="Cinque Terre" width="150" height="200"></button></a>
+        <div class="dropdown-content">
+        <img src="romance\forest.jpg" alt="Cinque Terre" width="250" height="400">
+        <div class="desc">A forest of hands and teeth</div>
+        </div>
+      </div>
+<div class="about">
+    <div class="heading1">
+    <h3><b>A forest of hands and teeth</b></h3>
+    </div>
+    <div>
+        <p>
+            A post apocalyptic romance of the first order, elegantly written from first to last line.
+        </p>
+    </div>
+</div>
+</div>
+<div class="flex1">
+    <div class="dropdown">
+        <a class="nav-link active" aria-current="page" href="#"><button class="dropbtn"> <img src="romance\Gentle-Warrior-Julie-Garwood-cover.jpg.optimal.jpg" alt="Cinque Terre" width="150" height="200"></button></a>
+        <div class="dropdown-content">
+        <img src="romance\Gentle-Warrior-Julie-Garwood-cover.jpg.optimal.jpg" alt="Cinque Terre" width="250" height="400">
+        <div class="desc">Gentle Warrior</div>
+        </div>
+      </div>
+<div class="about">
+    <div class="heading1">
+    <h3><b>Gentle Warrior</b></h3>
+    </div>
+    <div>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti officia consequatur, illum ab inventore minima vitae doloremque fuga hic obcaecati, enim ullam perspiciatis ea accusamus voluptas praesentium beatae sunt rerum.
+        </p>
+    </div>
+</div>
+</div>
+<div class="flex1">
+    <div class="dropdown">
+        <a class="nav-link active" aria-current="page" href="#"><button class="dropbtn"> <img src="romance\images (1).jpg" alt="Cinque Terre" width="150" height="200"></button></a>
+        <div class="dropdown-content">
+        <img src="romance\images (1).jpg" alt="Cinque Terre" width="250" height="400">
+        <div class="desc">Ravens</div>
+        </div>
+      </div>
+<div class="about">
+    <div class="heading1">
+    <h3><b>Ravens</b></h3>
+    </div>
+    <div>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti officia consequatur, illum ab inventore minima vitae doloremque fuga hic obcaecati, enim ullam perspiciatis ea accusamus voluptas praesentium beatae sunt rerum.
+        </p>
+    </div>
+</div>
+</div>
+<div class="flex1">
+    <div class="dropdown">
+        <a class="nav-link active" aria-current="page" href="#"><button class="dropbtn"> <img src="romance\images.jpg" alt="Cinque Terre" width="150" height="200"></button></a>
+        <div class="dropdown-content">
+        <img src="romance\images.jpg" alt="Cinque Terre" width="250" height="400">
+        <div class="desc">Somewhere With The Wind</div>
+        </div>
+      </div>
+<div class="about">
+    <div class="heading1">
+    <h3><b>Somewhere With The Wind</b></h3>
+    </div>
+    <div>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti officia consequatur, illum ab inventore minima vitae doloremque fuga hic obcaecati, enim ullam perspiciatis ea accusamus voluptas praesentium beatae sunt rerum.
+        </p>
+    </div>
+</div>
+</div>
+<div class="flex1">
+    <div class="dropdown">
+        <a class="nav-link active" aria-current="page" href="#"><button class="dropbtn"> <img src="romance\preview-page0 (1).jpg" alt="Cinque Terre" width="150" height="200"></button></a>
+        <div class="dropdown-content">
+        <img src="romance\preview-page0 (1).jpg" alt="Cinque Terre" width="250" height="400">
+        <div class="desc">A Love Story</div>
+        </div>
+      </div>
+<div class="about">
+    <div class="heading1">
+    <h3><b>A Love Story</b></h3>
+    </div>
+    <div>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti officia consequatur, illum ab inventore minima vitae doloremque fuga hic obcaecati, enim ullam perspiciatis ea accusamus voluptas praesentium beatae sunt rerum.
+        </p>
+    </div>
+</div>
+</div>
+<div class="flex1">
+    <div class="dropdown">
+        <a class="nav-link active" aria-current="page" href="#"><button class="dropbtn"> <img src="romance\preview-page0.jpg" alt="Cinque Terre" width="150" height="200"></button></a>
+        <div class="dropdown-content">
+        <img src="romance\preview-page0.jpg" alt="Cinque Terre" width="250" height="400">
+        <div class="desc">Rome Is Us</div>
+        </div>
+      </div>
+<div class="about">
+    <div class="heading1">
+    <h3><b>Rome Is Us</b></h3>
+    </div>
+    <div>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti officia consequatur, illum ab inventore minima vitae doloremque fuga hic obcaecati, enim ullam perspiciatis ea accusamus voluptas praesentium beatae sunt rerum.
+        </p>
+    </div>
+</div>
+</div>
+<br><br><br>
+</body>
+</html>

@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 5</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body { margin: 0;
+  background-color: #f1f1f1;
+  font-family: Arial, Helvetica, sans-serif;}
+        .flex_container2{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            text-align: center;
+        }
+        .navbar{
+            position: fixed;
+            height: 5%;
+            top: 0;
+            width: 100%;
+            padding-top: 10px;
+            padding-bottom: 5px;
+        }
+        #navbar {
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: block;
+  transition: top 0.3s;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+}
+.dropbtn1 {
+  background-color: #ce87dd;
+  color: white;
+  padding: 10px;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: double;
+  display: block;
+}
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+        .main{
+            height: 1000px;
+            width: 100%;
+            padding-top: 3%;
+            background-color: whitesmoke;
+        }
+        .image{
+            padding: 0.2%;
+            width: 100%;
+            background-color: whitesmoke;
+            text-align: center;
+        }
+        .chapnav{
+            justify-content: center;
+            width: 5%;
+        }
+        .heading{
+            font-family: "Papyrus", "Courier New", monospace;
+            text-align: center;
+            padding: 2%;
+        }
+        .heading1{
+            font-family: "Papyrus", "Courier New", monospace;
+            text-align: center;
+            padding: 1%;
+        }
+        .text{
+            padding-left: 20%;
+            text-align: left;
+            padding-right: 20%;
+            font-size: 17px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="mainsite.html"><img src="logo.png" width="40px" height="40px"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <div>
+                    <a class="nav-link active" aria-current="page" href="mainsite.html"><button class="dropbtn">Home</button></a>
+                    </div>
+                  </li>
+                  <li class="nav-item">
+                    <div class="dropdown">
+                      <a class="nav-link" href="#"><button class="dropbtn">Browse</button></a>
+                      <div class="dropdown-content">
+                        <a href="search.html">Romance</a>
+                        <a href="searchhorror.html">Horror</a>
+                        <a href="#">Drama</a>
+                        <a href="#">Fiction</a>
+                        <a href="#">Thriller</a>
+                        <a href="#">Comedy</a>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <form class="navbar-form navbar-left" action="/action_page.php">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search" name="search">
+                    <div class="input-group-btn">
+                      <button class="btn btn-default" type="submit">
+                        <i class="glyphicon glyphicon-search"></i>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </nav>
+      </div>
+      <div class="main">
+        <div class="chapnav">
+            <div class="dropdown">
+                <a class="nav-link" href="#"><button class="dropbtn1">Chapters</button></a>
+                <div class="dropdown-content">
+                <a href="chapter1.html">Chapter 1</a>
+                <a href="chapter2.html">Chapter 2</a>
+                <a href="chapter3.html">Chapter 3</a>
+                <a href="chapter4.html">Chapter 4</a>
+                <a href="#">Chapter 5</a>
+                </div>
+              </div>
+        </div>
+        <div class="image">
+        </div>
+        <div class="heading">
+            <h2><u><b>Chapter 5</b></u></h2>
+        </div>
+        <div class="text">
+            <p>When Corey texted me last night to let me know about the
+                meeting today, it was the first time I’d heard from him in
+                months. I was sitting at my computer desk, staring down at an
+                ant as it crawled across my big toe.<br>
+                <br>
+                The ant was alone, fluttering left and right, up and down,
+                searching for food or friends. He seemed confused by his
+                solitude. Or maybe he was excited for his newfound freedom.
+                I couldn’t help but wonder why he was alone. Ants usually
+                travel with an army.<br>
+                <br>
+                The fact that I was curious about the ant’s current situation
+                was a clear sign I needed to leave my apartment. I was worried
+                that, after being cooped up caring for my mother for so long,
+                once I stepped out into the hallway I would be just as confused
+                as that ant. Left, right, inside, outside, where are my friends,
+                where is the food?<br>
+                <br>
+                The ant crawled off my toe and onto the hardwood floor.
+                He disappeared beneath the wall when Corey’s texts came
+                through.<br>
+                <br>
+                I was hoping when I drew a line in the sand months ago,
+                he’d understand: since we no longer have sex, the most
+                appropriate method of contact between a literary agent and his
+                author is email.<br>
+                <br>
+                His text read: Meet me tomorrow morning at nine at the
+                Pantem Press building, floor 14. I think we might have an
+                offer.<br>
+                <br>
+                He didn’t even ask about my mom in the text. I wasn’t
+                surprised. His lack of interest in anything other than his job
+                and himself are the reasons we’re no longer together. His lack
+of concern made me feel unjustly irritated. He doesn’t owe me
+anything, but he could have at least acted like he cared.<br>
+<br>
+I didn’t text him back at all last night. Instead, I set down
+my phone and stared at the crack at the base of my wall—the
+one the ant had disappeared into. I wondered if he would find
+other ants in the wall, or if he was a loner. Maybe he was like
+me and had an aversion to other ants.<br>
+<br>
+It’s hard to say why I have such a deeply crippling
+aversion to other humans, but if I had to wager a bet, I’d say
+it’s a direct result of my own mother being terrified of me.
+Terrified may be a strong word. But she certainly didn’t
+trust me as a child. She kept me fairly secluded from people
+outside of school because she was afraid of what I might be
+capable of during my many sleepwalking episodes.<br>
+<br> That
+paranoia bled into my adulthood, and by then, I was set in my
+ways. A loner. Very few friends and not much of a social life.
+Which is why this is the first morning I’ve left my apartment
+since weeks before she passed away.<br>
+<br>
+I figured my first trip outside of my apartment would be
+somewhere I missed, like Central Park or a bookstore.
+I certainly didn’t think I’d find myself here, standing in
+line in the lobby of a publishing house, desperately praying
+whatever this offer is will catch me up on my rent and I won’t
+be evicted. But here I am, one meeting away from either being
+homeless or receiving a job offer that will give me the means
+to look for a new apartment.<br>
+<br>
+I look down and smooth out the white shirt Jeremy lent me
+in the bathroom across the street. I’m hoping I don’t look too
+ridiculous. Maybe there’s a chance I can pull it off, as if
+wearing men’s shirts twice my size is some cool new fashion
+statement.<br>
+<br>
+“Nice shirt,” someone behind me says.<br>
+<br>
+I turn at the sound of Jeremy’s voice, shocked to see him.<br>
+<br>
+Is he following me?<br>
+<br>
+It’s my turn in line, so I hand the security guard my
+driver’s license and then look at Jeremy, taking in the new
+shirt he’s wearing. “Do you keep spare shirts in your back
+pocket?” It hasn’t been that long since he gave me the one off
+his back.<br>
+<br>
+“My hotel is a block away. Walked back to change.”<br>
+<br>
+His hotel. That’s promising. If he’s staying in a hotel,
+maybe he doesn’t work here. And if he doesn’t work here,
+maybe he isn’t in the publishing industry. I’m not sure why I
+don’t want him to be in the publishing industry. I just have no
+idea who my meeting is with, and I’m hoping it has nothing to
+do with him after the morning we’ve already had. “Does that
+mean you don’t work in this building?”<br>
+<br>
+He pulls out his identification and hands it to the security
+guard. “No, I don’t work here. I have a meeting on the
+fourteenth floor.”<br>
+<br>
+Of course he does.<br>
+<br>
+“So do I,” I say.<br>
+<br>
+A fleeting smile appears on his mouth and disappears just
+as quickly, as if he remembered what happened across the
+street and realized it’s still too soon to not be affected. “What
+are the chances we’re heading to the same meeting?” He takes
+his identification back from the guard who points us in the
+direction of the elevators.<br>
+<br>
+“I wouldn’t know,” I say. “I haven’t been told exactly why
+I’m here yet.” We walk onto the elevator, and he presses the
+button for the fourteenth floor. He faces me as he pulls his tie
+out of his pocket and begins to put it on.<br>
+<br>
+I can’t stop staring at his wedding ring.<br>
+<br>
+“Are you a writer?” he asks.<br>
+<br>
+I nod. “Are you?”<br>
+<br>
+“No. My wife is.” He pulls at his tie until it’s secured in
+place. “Have you written anything I would know?”<br>
+<br>
+“I doubt it. No one reads my books.”<br>
+<br>
+His lips turn up. “There aren’t many Lowens in the world.
+I’m sure I can figure out which books you’ve written.”
+Why? Does he actually want to read them? He looks down
+at his phone and begins to type.<br>
+<br>
+“I never said I write under my real name.”<br>
+<br>
+He doesn’t look up from his phone until the elevator doors
+open. He moves toward them, turning in the doorway to face
+me. He holds up his phone and smiles. “You don’t write under
+a pen name. You write under Lowen Ashleigh, which, funny
+enough, is the name of the author I’m meeting at nine thirty.”
+I finally get that smile, and as gorgeous as it is, I don’t
+want it anymore.<br>
+<br>
+He just Googled me. And even though my meeting is at
+nine, not nine thirty, he seems to know more about it than I do.
+If we really are headed to the same meeting, it makes our
+chance meeting on the street seem somewhat suspicious. But I
+guess the odds of us both being in the same place at the same
+time aren’t all that inconceivable, considering we were headed
+in the same direction to the same meeting, and therefore,
+witnessed the same accident.<br>
+<br>
+Jeremy steps aside, and I exit the elevator. I open my
+mouth, preparing to speak, but he takes a few steps, walking
+backward. “See you in a few.”<br>
+<br>
+I don’t know him at all, nor do I know how he relates to
+the meeting I’m about to have, but even without being privy to
+any details of what’s happening this morning, I can’t help but
+like the guy. The man literally gave me the shirt off his back,
+so I doubt he has a vindictive nature.<br>
+<br>
+I smile before he rounds the corner. “Alright. See you in a
+few.”<br>
+<br>
+He returns the smile. “Alright.”<br>
+<br>
+I watch him until he makes a left and disappears. As soon
+as I’m out of his line of sight, I’m able to relax a little. This
+morning has just been…a lot. Between the accident I
+witnessed and being in enclosed spaces with that confusing
+man, I’m feeling so strange. I press my palm against the wall
+and lean into it. What the hell—<br>
+<br>
+“You’re on time,” Corey says. His voice startles me. I spin
+around, and he’s walking up to me from the opposite hallway.<br>
+<br>
+He leans in and kisses me on the cheek. I stiffen.<br>
+<br>
+“You’re never on time.”<br>
+<br>
+“I would have been here sooner, but…” I shut up. I don’t
+explain what prevented me from being early. He seems
+disinterested as he heads in the same direction as Jeremy.
+“The actual meeting isn’t until nine thirty, but I figured
+you’d be late, so I told you nine.”<br>
+<br>
+I pause, staring at the back of his head. What the hell,
+Corey? If he’d told me nine thirty rather than nine, I wouldn’t
+have witnessed the accident across the street. I wouldn’t have
+been subjected to a stranger’s blood.<br>
+<br>
+“You coming?” Corey asks, pausing to look back at me.
+I bury my irritation. I’m used to doing that when it comes
+to him.<br>
+<br>
+We make it to an empty conference room. Corey closes the
+door behind us, and I take a seat at the conference table. He
+sits next to me at the head of the table, positioning himself so
+that he’s staring at me. I try not to frown as I take in the sight
+of him after our months-long hiatus, but he hasn’t changed.
+Still very clean, groomed, wearing a tie, glasses, a smile.
+Always such a stark contrast to myself.<br>
+<br>
+“You look terrible.” I say it because he doesn’t look
+terrible. He never does, and he knows it.<br>
+<br>
+“You look refreshed and ravishing.” He says it because I
+never look refreshed and ravishing. I always look tired, and
+maybe even perpetually bored. I’ve heard of Resting Bitch
+Face, but I relate more to Resting Bored Face.<br>
+<br>
+“How’s your mother?”<br>
+<br>
+“She died last week.”<br>
+<br>
+He wasn’t expecting that. He leans back in his chair and
+tilts his head. “Why didn’t you tell me?”<br>
+<br>
+Why haven’t you bothered asking until now? I shrug. “I’m
+still processing.”<br>
+<br>
+My mother had been living with me for the past nine
+months—since she was diagnosed with stage four colon
+cancer. She passed away last Wednesday after three months on
+hospice. It was difficult to leave the apartment in those last
+few months because she relied on me for everything—from
+drinking, to eating, to turning her over in her bed. When she
+took a turn for the worse, I wasn’t able to leave her alone at
+all, which is why I didn’t step foot outside of my apartment for
+weeks. Luckily, a Wi-Fi connection and a credit card make it
+easy to live life completely indoors in Manhattan. Anything
+and everything a person could possibly need can be delivered.
+Funny how one of the most populated cities in the world
+can double as a paradise for agoraphobics.<br>
+<br>
+“You okay?” Corey asks.<br>
+<br>
+I mask my disquiet with a smile, even if his concern is
+only a formality. “I’m fine. It helps that it was expected.” I’m
+only saying what I think he wants to hear. I’m not sure how
+he’d react to the truth—that I’m relieved she’s gone. My
+mother only ever brought guilt into my life. Nothing less,
+nothing more. Just consistent guilt.<br>
+<br>
+Corey heads for the counter lined with breakfast pastries,
+bottles of water, and a coffee carafe. “You hungry? Thirsty?”
+“Water’s fine.”<br>
+<br>
+He grabs two waters and hands one to me, then returns to
+his seat. “Do you need help with the will? I’m sure Edward
+can help.”<br>
+<br>
+Edward is the lawyer at Corey’s literary agency. It’s a
+small agency, so a lot of the writers use Edward’s expertise in
+other areas. Sadly, I won’t be needing it. Corey tried to tell me
+when I signed the lease on my two-bedroom last year that I
+wouldn’t be able to afford it. But my mother insisted she die
+with dignity—in her own room. Not in a nursing home. Not in
+a hospital. Not in a hospital bed in the middle of my efficiency
+apartment. She wanted her own bedroom with her own things.
+She promised what was left in her bank account after her
+death would help me catch up on all the time off I had to take
+from my writing career. For the past year, I’ve lived off what
+little advance I had left over from my last publishing contract.
+But it’s all gone now, and apparently, so is my mother’s
+money. It was one of the last things she confessed to me before
+she finally succumbed to the cancer. I would have cared for
+her regardless of her financial situation. She was my mother.
+But the fact that she felt she needed to lie to me in order for
+me to agree to take her in proves how disconnected we were
+from one another.<br>
+<br>
+I take a sip of my water and then shake my head. “I don’t
+really need a lawyer. All she left me was debt, but thanks for
+the offer.”<br>
+<br>
+Corey purses his lips. He knows my financial situation
+because, as my literary agent, he’s the one who sends my
+royalty checks. Which is why he’s looking at me with pity
+now. “You have a foreign royalty check coming soon,” he
+says, as if I’m not aware of every penny coming in my
+direction for the next six months. As if I haven’t already spent
+it.<br>
+<br>
+“I know. I’ll be fine.” I don’t want to talk about my
+financial issues with Corey. With anyone.<br>
+<br>
+Corey shrugs a little, unconvinced. He looks down and
+straightens up his tie. “Hopefully this offer will be good for
+both of us,” he says.<br>
+<br>
+I’m relieved the subject is changing. “Why are we meeting
+in person with a publisher? You know I prefer to do things
+over email.”<br>
+<br>
+“They requested the meeting yesterday. Said they have a
+job they’d like to discuss with you, but they wouldn’t give me
+any details over the phone.”<br>
+<br>
+“I thought you were working on getting another contract
+with my last publisher.”<br>
+<br>
+“Your books do okay, but not well enough to secure
+another contract without sacrificing some of your time. You
+have to agree to engage in social media, go on tour, build a fan
+base. Your sales alone aren’t cutting it in the current market.”
+I was afraid of this. A contract renewal with my current
+publisher was all the financial hope I had left. The royalty
+checks from my previous books have dwindled along with my
+book sales. I’ve done very little writing this past year because
+of my commitment to my mother, so I have nothing to sell to a
+publisher.<br>
+<br>
+“I have no idea what Pantem will offer, or if it’s even
+something you’ll be interested in,” Corey says. “We have to
+sign a non-disclosure agreement before they’ll give us more
+details. The secrecy has me curious, though. I’m trying not to
+get my hopes up, but there are a lot of possibilities and I have
+a good feeling. We need this.”<br>
+<br>
+He says we because whatever the offer is, he gets fifteen
+percent if I accept. It’s the agent-client standard. What isn’t the
+agent-client standard would be the six months we spent in a
+relationship and the two years of sex that followed our
+breakup.<br>
+<br>
+Our sexual relationship only lasted as long as it did
+because he wasn’t serious about anyone else and neither was I.
+It was convenient until it wasn’t. But the reason our actual
+relationship was so short-lived is because he was in love with
+another woman.<br>
+<br>
+Never mind that the other woman in our relationship was
+also me.<br>
+<br>
+It has to be confusing, falling in love with a writer’s words
+before you meet the actual writer. Some people find it difficult
+to separate a character from the individual who created them.
+Corey, surprisingly, is one of those people, despite being a
+literary agent. He met and fell in love with the female
+protagonist of my first novel, Open Ended, before he ever
+spoke to me. He assumed my character’s personality was a
+close reflection of my own, when in fact, I couldn’t be more
+opposite from her<br>
+<br>
+                </p>
+                <p>
+                  <div class="flex_container2">
+                    <div class="heading1">
+                      <a class="nav-link active" aria-current="page" href="chapter4.html"><button class="dropbtn"><h2>Previous Chapter</h2></button></a>
+                      </div>
+                    <div class="heading1">
+                        <a class="nav-link active" aria-current="page" href="#"><button class="dropbtn"><h2>To Be Continued...</h2></button></a>
+                        </div>
+                  </div>
+                </p>
+        </div>
+      <div>
+</body>
+</html>

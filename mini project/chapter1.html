@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body { margin: 0;
+  background-color: #f1f1f1;
+  font-family: Arial, Helvetica, sans-serif;}
+        .flex_container2{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        .navbar{
+            position: fixed;
+            height: 5%;
+            top: 0;
+            width: 100%;
+            padding-top: 10px;
+            padding-bottom: 5px;
+        }
+        #navbar {
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: block;
+  transition: top 0.3s;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+}
+.dropbtn1 {
+  background-color: #ce87dd;
+  color: white;
+  padding: 10px;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: double;
+  display: block;
+}
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+        .main{
+            height: 1000px;
+            width: 100%;
+            padding-top: 3%;
+            background-color: whitesmoke;
+        }
+        .image{
+            width: 100%;
+            background-color:whitesmoke;
+            text-align: center;
+        }
+        .chapnav{
+            justify-content: center;
+            width: 5%;
+        }
+        .heading{
+            font-family: "Papyrus", "Courier New", monospace;
+            text-align: center;
+            padding: 2%;
+        }
+        .heading1{
+            font-family: "Papyrus", "Courier New", monospace;
+            text-align: center;
+            padding: 1%;
+        }
+        .text{
+            padding-left: 20%;
+            text-align: left;
+            padding-right: 20%;
+            font-size: 17px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="mainsite.html"><img src="logo.png" width="40px" height="40px"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <div>
+                    <a class="nav-link active" aria-current="page" href="mainsite.html"><button class="dropbtn">Home</button></a>
+                    </div>
+                  </li>
+                  <li class="nav-item">
+                    <div class="dropdown">
+                      <a class="nav-link" href="#"><button class="dropbtn">Browse</button></a>
+                      <div class="dropdown-content">
+                        <a href="search.html">Romance</a>
+                        <a href="searchhorror.html">Horror</a>
+                        <a href="#">Drama</a>
+                        <a href="#">Fiction</a>
+                        <a href="#">Thriller</a>
+                        <a href="#">Comedy</a>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <form class="navbar-form navbar-left" action="/action_page.php">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search" name="search">
+                    <div class="input-group-btn">
+                      <button class="btn btn-default" type="submit">
+                        <i class="glyphicon glyphicon-search"></i>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </nav>
+      </div>
+      <div class="main">
+        <div class="chapnav">
+            <div class="dropdown">
+                <a class="nav-link" href="#"><button class="dropbtn1">Chapters</button></a>
+                <div class="dropdown-content">
+                <a href="#">Chapter 1</a>
+                <a href="chapter2.html">Chapter 2</a>
+                <a href="chapter3.html">Chapter 3</a>
+                <a href="chapter4.html">Chapter 4</a>
+                <a href="chapter5.html">Chapter 5</a>
+                </div>
+              </div>
+        </div>
+        <div class="image">
+            <img src="screenshot2.png">
+        </div>
+        <div class="heading">
+            <h2><u><b>Chapter 1</b></u></h2>
+        </div>
+        <div class="text">
+            <p>I hear the crack of his skull before the spattering of blood
+                reaches me.<br>
+                <br>
+                I gasp and take a quick step back onto the sidewalk. One of
+                my heels doesn’t clear the curb, so I grip the pole of a No
+                Parking sign to steady myself.<br>
+                <br>
+                The man was in front of me a matter of seconds ago. We
+                were standing in a crowd of people waiting for the crosswalk
+                light to illuminate when he stepped into the street prematurely,
+                resulting in a run-in with a truck. I lunged forward in an
+                attempt to stop him—grasping at nothing as he went down. I
+                closed my eyes before his head went under the tire, but I heard
+                it pop like the cork of a champagne bottle.<br>
+                <br>
+                He was in the wrong, looking casually down at his phone,
+                probably a side effect of crossing the same street without
+                incident many times before. Death by routine.<br>
+                <br>
+                People gasp, but no one screams. The passenger of the
+                offending vehicle jumps out of the truck and is immediately on
+                his knees near the man’s body. I back away from the scene as
+                several people rush forward to help. I don’t have to look at the
+                man under the tire to know he didn’t survive that. I only have
+                to look down at my once-white shirt—at the blood now
+                splattered across it—to know that a hearse would serve him
+                better than an ambulance.<br>
+                <br>
+                I spin around to move away from the accident—to find a
+                place to take a breath—but the crosswalk sign now says walk
+                and the thick crowd takes heed, making it impossible for me to
+                swim upstream in this Manhattan river. <br>
+                <br>
+                Some don’t even look up from their cell phones as they pass right by the accident. I
+                stop trying to move, and wait for the crowd to thin. I glance
+                back toward the accident, careful not to look directly at the
+                man. The driver of the truck is now at the rear of the vehicle,
+                wide-eyed, on a cell phone. Three, maybe four, people are
+                assisting them. A few are led by their morbid curiosities,
+                filming the gruesome scene with their phones.<br>
+                <br>
+                If I were still living in Virginia, this would play out in a
+                completely different manner. Everyone around would stop.
+                Panic would ensue, people would be screaming, a news crew
+                would be on scene in a matter of minutes. But here in
+                Manhattan, a pedestrian struck by a vehicle happens so often,
+                it’s not much more than an inconvenience. A delay in traffic
+                for some, a ruined wardrobe for others. This probably happens
+                so often, it won’t even end up in print.<br>
+                <br>
+                As much as the indifference in some of the people here
+                disturbs me, it’s exactly why I moved to this city ten years
+                ago. People like me belong in overpopulated cities. The state
+                of my life is irrelevant in a place this size. There are far more
+                people here with stories much more pitiful than mine.
+                Here, I’m invisible. Unimportant. Manhattan is too
+                crowded to give a shit about me, and I love her for it.<br>
+                <br>
+                “Are you hurt?”<br>
+                <br>
+                I look up at a man as he touches my arm and scans my
+                shirt. Deep concern is embedded in his expression as he looks
+                me up and down, assessing me for injuries. I can tell by his
+                reaction that he isn’t one of the more hardened New Yorkers.
+                He might live here now, but wherever he’s from, it’s a place
+                that didn’t completely beat the empathy out of him.<br>
+                <br>
+                “Are you hurt?” the stranger repeats, looking me in the eye
+                this time.<br>
+                <br>
+                “No. It’s not my blood. I was standing near him when…” I
+                stop speaking. I just saw a man die. I was so close to him, his
+                blood is on me.<br>
+                <br>
+                I moved to this city to be invisible, but I am certainly not
+                impenetrable. It’s something I’ve been working on
+                attempting to become as hardened as the concrete beneath my
+feet. It hasn’t been working out so well. I can feel everything I
+just witnessed settling in my stomach.<br>
+<br>
+I cover my mouth with my hand, but pull it away quickly
+when I feel something sticky on my lips. More blood. I look
+down at my shirt. So much blood, none of it mine. I pinch at
+my shirt and pull it away from my chest, but it sticks to my
+skin in spots where the blood splatters are beginning to dry.
+I think I need water. I’m starting to feel light-headed, and I
+want to rub my forehead, pinch my nose, but I’m scared to
+touch myself. I look up at the man still gripping my arm.<br>
+<br>
+“Is it on my face?” I ask him.<br>
+<br>
+He presses his lips together and then darts his eyes away,
+scanning the street around us. He gestures toward a coffee
+shop a few doors down.<br>
+<br>
+“They’ll have a bathroom,” he says, pressing his hand
+against the small of my back as he leads me in that direction.
+I look across the street at the Pantem Press building I was
+headed to before the accident. I was so close. Fifteen—maybe
+twenty—feet away from a meeting I desperately need to be in.
+I wonder how close the man who just died was from his
+destination?<br>
+<br>
+The stranger holds the door open for me when we reach
+the coffee shop. A woman carrying a coffee in each hand
+attempts to squeeze past me through the doorway until she
+sees my shirt. She scurries backward to get away from me,
+allowing us both to enter the building. I move toward the
+women’s restroom, but the door is locked. The man pushes
+open the door to the men’s restroom and motions for me to
+follow him.<br>
+<br>
+He doesn’t lock the door behind us as he walks to the sink
+and turns on the water. I look in the mirror, relieved to see it
+isn’t as bad as I’d feared. There are a few spatters of blood on
+my cheeks that are beginning to darken and dry, and a spray
+above my eyebrows. But luckily, the shirt took the brunt of it.
+The man hands me wet paper towels, and I wipe at my face
+while he wets another handful. I can smell the blood now. The
+tanginess in the air sends my mind whirling back to when I
+was ten. The smell of blood was strong enough to remember it
+all these years later.<br>
+<br>
+I attempt to hold my breath at the onset of more nausea. I
+don’t want to puke. But I want this shirt off me. Now.
+I unbutton it with trembling fingers, then pull it off and
+place it under the faucet. I let the water do its job while I take
+the other wet napkins from the stranger and begin wiping the
+blood off my chest.<br>
+<br>
+He heads for the door, but instead of giving me privacy
+while I stand here in my least attractive bra, he locks us inside
+the bathroom so no one will walk in on me while I’m shirtless.
+It’s disturbingly chivalrous and leaves me feeling uneasy. I’m
+tense as I watch him through the reflection in the mirror.<br>
+<br>
+Someone knocks.<br>
+<br>
+“Be right out,” he says.<br>
+<br>
+I relax a little, comforted by the thought that someone
+outside this door would hear me scream if I needed to.
+I focus on the blood until I’m certain I’ve washed it all off
+my neck and chest. I inspect my hair next, turning left to right
+in the mirror, but find only an inch of dark roots above fading
+caramel.<br>
+<br>
+“Here,” the man says, fingering the last button on his crisp
+white shirt. “Put this on.”<br>
+<br>
+He’s already removed his suit jacket, which is now
+hanging from the doorknob. He frees himself of his button-up
+shirt, revealing a white undershirt beneath it. He’s muscular,
+taller than me. His shirt will swallow me. I can’t wear this into
+my meeting, but I have no other option. I take the shirt when
+he hands it to me. I grab a few more dry paper towels and pat
+at my skin, then pull it on and begin buttoning it.<br>
+<br> It looks
+ridiculous, but at least it wasn’t my skull that exploded on
+someone else’s shirt. Silver lining I take my wet shirt out of the sink and accept there’s no
+saving it. I toss it in the trashcan, and then I grip the sink and
+stare at my reflection. Two tired, empty eyes stare back at me.
+The horror of what they’ve just witnessed have darkened the
+hazel to a murky brown. I rub my cheeks with the heels of my
+hands to inspire color, to no avail. I look like death.<br>
+<br>
+I lean against the wall, turning away from the mirror. The
+man is wadding up his tie. He shoves it in the pocket of his
+suit and assesses me for a moment. “I can’t tell if you’re calm
+or in a state of shock.”<br>
+<br>
+I’m not in shock, but I don’t know that I’m calm, either.<br>
+<br>
+“I’m not sure,” I admit. “Are you okay?”<br>
+<br>
+“I’m fine,” he says. “I’ve seen worse, unfortunately.”<br>
+<br>
+I tilt my head as I attempt to dissect the layers of his
+cryptic reply. He breaks eye contact, and it only makes me
+stare even harder, wondering what he’s seen that tops a man’s
+head being crushed beneath a truck. Maybe he is a native New
+Yorker. Or maybe he works in a hospital. He has an air of
+competence that often accompanies people who are in charge
+of other people.<br>
+<br>
+“Are you a doctor?”<br>
+<br>
+He shakes his head. “I’m in real estate. Used to be,
+anyway.” He steps forward and reaches for my shoulder,
+brushing something away from my shirt. His shirt. When he
+drops his arm, he regards my face for a moment before taking
+a step back.<br>
+<br>
+His eyes match the tie he just shoved in his pocket.
+Chartreuse. He’s handsome, but there’s something about him
+that makes me think he wishes he weren’t. Almost as if his
+looks might be an inconvenience to him. A part of him he
+doesn’t want anyone to notice. He wants to be invisible in this
+city. <br>
+<br>Just like me.<br>
+<br>
+Most people come to New York to be discovered. The rest
+of us come here to hide.<br>
+<br>
+“What’s your name?” he asks.<br>
+<br>
+“Lowen.”<br>
+<br>
+There’s a pause in him after I say my name, but it only
+lasts a couple seconds.<br>
+<br>
+“Jeremy,” he says. He moves to the sink and runs the water
+again, and begins washing his hands. I continue to stare at
+him, unable to mute my curiosity. What did he mean when he
+said he’s seen worse than the accident we just witnessed? He
+said he used to be in real estate, but even the worst day on the
+job as a realtor wouldn’t fill someone with the kind of gloom
+that’s filling this man.<br>
+<br>
+“What happened to you?” I ask.<br>
+<br>
+He looks at me in the mirror. “What do you mean?”<br>
+<br>
+“You said you’ve seen worse. What have you seen?”<br>
+<br>
+He turns off the water and dries his hands, then faces me.
+“You actually want to know?”<br>
+<br>
+I nod.<br>
+<br>
+He tosses the paper towel into the trashcan and then shoves
+his hands in his pockets. His demeanor takes an even more
+sullen dive. He’s looking me in the eye, but there’s a
+disconnect between him and this moment. <br>
+<br>“I pulled my eightyear-old daughter’s body out of a lake five months ago.”<br>
+<br>
+I suck in a rush of air and bring my hand to the base of my
+throat. It wasn’t gloom at all in his expression. It was despair.
+“I’m so sorry,” I whisper. And I am. Sorry about his daughter.
+Sorry for being curious.<br>
+<br>
+“What about you?” he asks. He leans against the counter
+like this is a conversation he’s ready for. A conversation he’s
+been waiting for. Someone to come along and make his
+tragedies seem less tragic. It’s what you do when you’ve
+experienced the worst of the worst. You seek out people like
+you…people worse off than you…and you use them to make
+yourself feel better about the terrible things that have
+happened to you.<br>
+<br>
+I swallow before I speak, because my tragedies are nothing
+compared to his. I think of the most recent one, embarrassed to
+speak it out loud because it seems so insignificant compared to
+his. “My mother died last week.”<br>
+<br>
+speak it out loud because it seems so insignificant compared to
+his. “My mother died last week.”<br>
+<br>
+He doesn’t react to my tragedy like I reacted to his. He
+doesn’t react at all, and I wonder if it’s because he was hoping
+mine was worse. It isn’t. He wins.<br>
+<br>
+“How did she die?”<br>
+<br>
+“Cancer. I’ve been caring for her in my apartment for the
+past year.” He’s the first person I’ve said that to out loud. I can
+feel my pulse throbbing in my wrist, so I clasp my other hand
+around it. “Today is the first time I’ve stepped outside in
+weeks.”<br>
+<br>
+We stare at each other for a moment longer. I want to say
+something else, but I’ve never been involved in such a heavy
+conversation with a complete stranger before. I kind of want it
+to end, because where does the conversation even go from
+here?<br>
+<br>
+It doesn’t. It just stops.<br>
+<br>
+He faces the mirror again and looks at himself, pushing a
+strand of loose dark hair back in place. “I have a meeting I
+need to get to. You sure you’ll be okay?” He’s looking at my
+reflection in the mirror now.<br>
+<br>
+“Yes. I’m alright.”<br>
+<br>
+“Alright?” He turns, repeating the word like a question, as
+if being alright isn’t as reassuring to him as if I’d said I would
+be okay.<br>
+<br>
+“I’ll be alright,” I repeat. “Thank you for the help.”
+I want him to smile, but it doesn’t fit the moment. I’m
+curious what his smile would look like. Instead, he shrugs a
+little and says, “Alright, then.” He moves to unlock the door.
+He holds it open for me, but I don’t exit right away. Instead, I
+continue to watch him, not quite ready to face the world
+outside. I appreciate his kindness and want to say more, to
+thank him in some way, maybe over coffee or by returning his
+shirt to him. I find myself drawn to his altruism—a rarity these
+days. But it’s the flash of wedding ring on his left hand that
+propels me forward, out of the bathroom and coffee shop, onto
+the streets now buzzing with an even larger crowd.<br>
+<br>
+An ambulance has arrived and is blocking traffic in both
+directions. I walk back toward the scene, wondering if I should
+give a statement. I wait near a cop who is jotting down other
+eyewitness accounts. They aren’t any different from mine, but
+I give them my statement and contact information. I’m not
+sure how much help my statement is since I didn’t actually see
+him get hit. I was merely close enough to hear it. Close
+enough to be painted like a Jackson Pollock canvas.<br>
+<br>
+I look behind me and watch as Jeremy exits the coffee
+shop with a fresh coffee in his hand. He crosses the street,
+focused on wherever it is he’s going. His mind is somewhere
+else now, far away from me, probably on his wife and what
+he’ll say to her when he goes home missing a shirt.<br>
+<br>
+I pull my phone out of my purse and look at the time. I still
+have fifteen minutes before my meeting with Corey and the
+editor from Pantem Press. My hands are shaking even worse
+now that the stranger is no longer here to distract me from my
+thoughts. Coffee may help. Morphine would definitely help,
+but hospice removed it all from my apartment last week when
+they came to retrieve their equipment after my mother passed.
+It’s a shame I was too shaken to remember to hide it. I could
+really use some right about now.<br>
+<br>
+                </p>
+                <p>
+                    <div class="heading1">
+                        <a class="nav-link active" aria-current="page" href="chapter2.html"><button class="dropbtn"><h2>Next Chapter</h2></button></a>
+                        </div>
+                </p>
+        </div>
+      <div>
+</body>
+</html>
