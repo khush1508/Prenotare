@@ -1,7 +1,3 @@
-Certainly! Here's the revised README file for the "prenotare" repository:
-
----
-
 # prenotare Repository
 
 Welcome to the prenotare GitHub repository! This repository serves as the README file for the "prenotare" project.
